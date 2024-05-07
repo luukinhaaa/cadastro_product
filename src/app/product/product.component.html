@@ -1,9 +1,9 @@
-<main class="container bg-light p-5">
-  <form [formGroup]="catchFormGroup" class="col-6 mx-auto">
-    <h1 class="mb-4">Product Registration</h1>
+<main class="container bg-secondary text-white p-5">
+  <form [formGroup]="catchFormGroup" class="col-md-6 mx-auto">
+    <h1 class="mb-4">Cadastro de Produto</h1>
     <div class="row mb-3">
       <div class="col">
-        <label for="Name" class="form-label">Name:</label>
+        <label for="Name" class="form-label">Nome:</label>
         <input
           type="text"
           formControlName="name"
@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="mb-3">
-      <label for="Description" class="form-label">Description:</label>
+      <label for="Description" class="form-label">Descrição:</label>
       <textarea
         class="form-control"
         formControlName="description"
@@ -22,7 +22,7 @@
     </div>
     <div class="row mb-3">
       <div class="col">
-        <label for="Price" class="form-label">Price:</label>
+        <label for="Price" class="form-label">Preço:</label>
         <input
           type="text"
           formControlName="price"
@@ -31,7 +31,7 @@
         />
       </div>
       <div class="col">
-        <label for="Quantity" class="form-label">Quantity:</label>
+        <label for="Quantity" class="form-label">Quantidade:</label>
         <input
           type="text"
           formControlName="quantity"
@@ -44,23 +44,23 @@
       <button
         type="submit"
         (click)="submit()"
-        class="btn btn-dark btn-lg btn-block"
+        class="btn btn-primary btn-lg btn-block"
       >
-        Submit
+        Enviar
       </button>
     </div>
   </form>
   <div class="p-5">
-    <h3 class="mb-4 text-center">Products</h3>
-    <table class="table table-striped">
+    <h3 class="mb-4 text-center">Produtos</h3>
+    <table class="table table-striped table-dark">
       <thead>
         <tr>
           <th scope="col">ID</th>
-          <th scope="col">Name</th>
-          <th scope="col">Description</th>
-          <th scope="col">Price</th>
-          <th scope="col">Quantity</th>
-          <th scope="col">Options</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Descrição</th>
+          <th scope="col">Preço</th>
+          <th scope="col">Quantidade</th>
+          <th scope="col">Opções</th>
         </tr>
       </thead>
       <tbody>
@@ -71,11 +71,11 @@
           <td>R$ {{ catch.price }}</td>
           <td>{{ catch.quantity }}</td>
           <td class="d-flex gap-1">
-            <button class="btn btn-success btn-sm" (click)="update(catch)">
-              Edit
+            <button class="btn btn-warning btn-sm" (click)="update(catch)">
+              Editar
             </button>
             <button class="btn btn-danger btn-sm" (click)="delete(catch)">
-              Remove
+              Remover
             </button>
           </td>
         </tr>
